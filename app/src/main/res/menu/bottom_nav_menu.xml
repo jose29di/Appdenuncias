@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_privadas"
+        android:icon="@drawable/bullhorn"
+        android:title="@string/nav_privadas"/>
+    <item android:id="@+id/nav_crear"
+        android:icon="@drawable/ic_add"
+        android:title="@string/nav_crear"/>
+    <item android:id="@+id/nav_publicas"
+        android:icon="@drawable/newspaper"
+        android:title="@string/nav_publicas"/>
+</menu>

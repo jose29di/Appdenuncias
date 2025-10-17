@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Título del dashboard -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Card de Estadísticas -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estadisticas"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- KPIs en línea -->
+                <LinearLayout
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <!-- Total denuncias -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#E3F2FD"
+                        android:padding="16dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:elevation="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/totales"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:id="@+id/txtTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="#0D47A1"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <!-- Denuncias públicas -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#C8E6C9"
+                        android:padding="16dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:elevation="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/publicas"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:id="@+id/txtPublicas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E7D32"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <!-- Denuncias privadas -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFCDD2"
+                        android:padding="16dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:elevation="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/privadas"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="#555555"/>
+
+                        <TextView
+                            android:id="@+id/txtPrivadas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="#C62828"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Card de Últimas denuncias -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ultimas_denuncias_publicas"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="12dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerUltimas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

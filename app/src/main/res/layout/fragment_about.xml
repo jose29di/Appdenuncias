@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Logo/Icono -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_ecotec_logo"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/logo_app"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Título -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acerca_de"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Subtítulo -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sistema_de_denuncias"
+                    android:textSize="16sp"
+                    android:textColor="#555555"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- ProgressBar mientras carga -->
+                <ProgressBar
+                    android:id="@+id/progressAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Descripción general/dinámica -->
+                <TextView
+                    android:id="@+id/txtAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cargando_informacion"
+                    android:textSize="15sp"
+                    android:textColor="#333333"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Versión de la app -->
+                <TextView
+                    android:id="@+id/txtVersionInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:layout_marginBottom="2dp"/>
+
+                <!-- Desarrollador -->
+                <TextView
+                    android:id="@+id/txtDevInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:layout_marginBottom="2dp"/>
+
+                <!-- Correo de contacto -->
+                <TextView
+                    android:id="@+id/txtMailInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:layout_marginBottom="2dp"/>
+
+                <!-- Sitio web -->
+                <TextView
+                    android:id="@+id/txtWebInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:layout_marginBottom="2dp"/>
+
+                <!-- Última actualización -->
+                <TextView
+                    android:id="@+id/txtUpdateInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:layout_marginBottom="2dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

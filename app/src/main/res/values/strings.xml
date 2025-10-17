@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la app -->
+    <string name="app_name">App Denuncias</string>
+
+    <!-- General -->
+    <string name="sistema_de_denuncias">Sistema de Denuncias</string>
+    <string name="universidad_ecotec_grupo_15">Universidad ECOTEC - Grupo 15</string>
+    <string name="logo_app">Logo de la aplicación</string>
+    <string name="version_1_0_0">Versión 1.0.0</string>
+
+    <!-- Login -->
+    <string name="usuario">Usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="inicia_sesion_para_continuar">Inicia sesión para continuar</string>
+    <string name="no_tienes_cuenta_reg_strate_aqu">¿No tienes cuenta? Regístrate aquí</string>
+    <string name="olvidaste_tu_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="desc_btn_login">Botón para iniciar sesión</string>
+    <string name="desc_registro">Ir a registro</string>
+
+    <!-- Register -->
+    <string name="registro">Registro</string>
+    <string name="crea_tu_cuenta">Crea tu cuenta</string>
+    <string name="nombres_completos">Nombres completos</string>
+    <string name="sexo_m_f_o">Sexo (M/F/O)</string>
+    <string name="palabra_secreta">Palabra secreta</string>
+    <string name="respuesta_palabra_secreta">Respuesta palabra secreta</string>
+    <string name="repita_contrasena">Repita contraseña</string>
+    <string name="registrar">Registrar</string>
+    <string name="ya_tienes_cuenta_inicia_sesion">¿Ya tienes cuenta? Inicia sesión</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="estadisticas">Estadísticas</string>
+    <string name="totales">Totales</string>
+    <string name="publicas">Públicas</string>
+    <string name="privadas">Privadas</string>
+    <string name="ultimas_denuncias_publicas">Últimas denuncias públicas</string>
+
+    <!-- Denuncias -->
+    <string name="crear_denuncia">Crear Denuncia</string>
+    <string name="t_tulo">Título</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="provincia">Provincia</string>
+    <string name="fechadelevento">Fecha del evento (YYYY-MM-DD)</string>
+    <string name="tipo_ej_vial_ambiental_social">Tipo (ej: Vial, Ambiental, Social)</string>
+    <string name="visibilidad">Visibilidad</string>
+    <string name="p_blica">Pública</string>
+    <string name="privada">Privada</string>
+    <string name="enviar_denuncia">Enviar Denuncia</string>
+    <string name="mis_denuncias">Mis Denuncias</string>
+    <string name="no_hay_denuncias">No hay denuncias</string>
+    <string name="crea_tu_primera_denuncia">Crea tu primera denuncia desde el menú</string>
+    <string name="no_denuncias">Sin denuncias</string>
+    <string name="tipo">Tipo</string>
+    <string name="fecha">Fecha</string>
+    <string name="ubicacion">Ubicación</string>
+
+    <!-- Profile -->
+    <string name="mi_perfil">Mi Perfil</string>
+    <string name="seguridad">Seguridad</string>
+    <string name="palabra_secreta_opcional">Palabra secreta (Opcional)</string>
+    <string name="respuesta_secreta_opcional">Respuesta secreta (Opcional)</string>
+    <string name="nueva_contrasena_opcional">Nueva contraseña (Opcional)</string>
+    <string name="actualizar_perfil">Actualizar Perfil</string>
+    <string name="nota_campos_opcionales">Nota: Solo completa los campos que deseas actualizar</string>
+
+    <!-- About -->
+    <string name="acerca_de">Acerca de</string>
+    <string name="cargando_informacion">Cargando información…</string>
+    <string name="informacion_adicional">Información Adicional</string>
+    <string name="version">Versión:</string>
+    <string name="desarrollado_por">Desarrollado por:</string>
+    <string name="anio">Año:</string>
+    <string name="anio_2025">2025</string>
+
+    <!-- Navigation Drawer -->
+    <string name="open_drawer">Abrir menú</string>
+    <string name="close_drawer">Cerrar menú</string>
+    <string name="miembro_desde_2025">Miembro desde 2025</string>
+
+    <!-- Menu items -->
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_crear_denuncia">Crear Denuncia</string>
+    <string name="menu_mis_denuncias">Mis Denuncias</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_cerrar_sesion">Cerrar Sesión</string>
+    <string name="info">Informacion</string>
+    <string name="crear">Crear</string>
+
+    <string name="nav_privadas">Privadas</string>
+    <string name="nav_crear">Crear</string>
+    <string name="nav_publicas">Públicas</string>
+    <string name="_0">0</string>
+
+    <string name="about_version">Versión: %1$s</string>
+    <string name="about_developer">Desarrollador: %1$s</string>
+    <string name="about_contact">Contacto: %1$s</string>
+    <string name="about_web">Web: %1$s</string>
+    <string name="about_update">Última actualización: %1$s</string>
+    <string name="about_description_default">No hay descripción disponible</string>
+    <string name="about_info_default">No hay información disponible</string>
+
+
+</resources>

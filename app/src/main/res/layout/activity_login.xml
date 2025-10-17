@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Logo o Imagen -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_ecotec_logo"
+            android:contentDescription="@string/logo_app"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sistema_de_denuncias"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Subtítulo -->
+        <TextView
+            android:id="@+id/txtSubtitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/inicia_sesion_para_continuar"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Campo de Usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutUsuario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/usuario"
+                android:inputType="text"
+                android:autofillHints="username"
+                android:padding="16dp"
+                android:drawableStart="@android:drawable/ic_menu_myplaces"
+                android:drawablePadding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutContrasena"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutUsuario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:padding="16dp"
+                android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                android:drawablePadding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/layoutContrasena"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Botón de Iniciar Sesión -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="@string/iniciar_sesi_n"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0D47A1"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/progressLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/desc_btn_login"/>
+
+        <!-- Enlace para Registro -->
+        <TextView
+            android:id="@+id/txtRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tienes_cuenta_reg_strate_aqu"
+            android:textColor="#1565C0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:padding="18dp"
+            android:contentDescription="@string/desc_registro"/>
+
+        <!-- Texto de olvido de contraseña (opcional) -->
+        <TextView
+            android:id="@+id/txtOlvidoContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/olvidaste_tu_contrasena"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/txtRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:padding="18dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Card contenedor del formulario -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crear_denuncia"
+                    android:textColor="#0D47A1"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Título de la denuncia -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/t_tulo"
+                        android:inputType="textCapSentences"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Descripción de la denuncia -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/descripci_n"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="4"
+                        android:maxLines="6"
+                        android:gravity="top|start"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Ciudad -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtCiudad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/ciudad"
+                        android:inputType="textCapWords"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Provincia -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtProvincia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/provincia"
+                        android:inputType="textCapWords"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Fecha -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fechadelevento"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:inputType="none"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Tipo de denuncia -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:boxStrokeColor="#0D47A1"
+                    app:hintTextColor="#0D47A1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tipo_ej_vial_ambiental_social"
+                        android:inputType="textCapWords"
+                        android:padding="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Visibilidad -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visibilidad"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rbPublica"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/p_blica"
+                        android:checked="true"
+                        android:padding="12dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbPrivada"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privada"
+                        android:padding="12dp"/>
+                </RadioGroup>
+
+                <!-- ProgressBar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Botón enviar -->
+                <Button
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/enviar_denuncia"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#0D47A1"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

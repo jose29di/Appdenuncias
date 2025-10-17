@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTituloLista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mis_denuncias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#0D47A1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Card contenedor del RecyclerView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloLista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- RecyclerView para listar las denuncias -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false"/>
+
+            <!-- ProgressBar centrado mientras cargan los datos -->
+            <ProgressBar
+                android:id="@+id/progressDenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <!-- Mensaje cuando no hay denuncias -->
+            <LinearLayout
+                android:id="@+id/layoutEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="32dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@android:drawable/ic_menu_report_image"
+                    android:alpha="0.3"
+                    android:contentDescription="@string/no_denuncias"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_hay_denuncias"
+                    android:textSize="18sp"
+                    android:textColor="#757575"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crea_tu_primera_denuncia"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

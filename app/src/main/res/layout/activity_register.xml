@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtTituloRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registro"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crea_tu_cuenta"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Nombres completos -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombres_completos"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sexo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sexo_m_f_o"
+                android:inputType="text"
+                android:maxLength="1"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Palabra secreta (hint) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPalabraSecreta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/palabra_secreta"
+                android:inputType="text"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Respuesta de la palabra secreta -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPalabraSecretaResp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/respuesta_palabra_secreta"
+                android:inputType="text"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nombre de usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/usuario"
+                android:inputType="text"
+                android:autofillHints="username"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Repetir contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D47A1"
+            app:hintTextColor="#0D47A1"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtContrasena2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/repita_contrasena"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:padding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Botón registrar -->
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/registrar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#0D47A1"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Volver a login -->
+        <TextView
+            android:id="@+id/txtYaTienesCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ya_tienes_cuenta_inicia_sesion"
+            android:textColor="#1565C0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="14dp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
